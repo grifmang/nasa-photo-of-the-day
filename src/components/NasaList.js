@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import NasaCard from "./NasaCard";
+import { Container } from "reactstrap";
 
 function NasaList() {
     const [photo, setPhoto] = React.useState([]);
@@ -18,13 +19,13 @@ function NasaList() {
     }, [])
 
     return (
-        <div className="card">
+        <Container>
             <NasaCard 
             imgUrl={photo.url}
             date={photo.date}
             explain={photo.explanation}
             title={photo.title} />
-        </div>
+        </Container>
     )
 }
 
